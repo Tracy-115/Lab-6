@@ -2,8 +2,36 @@
 #include <ctime>
 using namespace std;
 
-int main(){
-int *a = nullptr;
-a = new int;
+const int SIZE=5, MIN=0, MAX= 6;
 
+void *enterArrayData(double *data){
+  cout<< "Data entry for the array: " << endl;
+  for(int i=1 ; i<=5 ; i++){
+    cout << "> Element #" << i << ":";
+    cin >> *(data+i);
+  }
+  cout << "Data entry complete." << endl;
+}
+
+void outputArrayData(double *data){
+  cout << "Outputting array elements: ";
+  for(int i=0; i<=5 ; i++){
+  cout << *(data+i)<<endl;
+  }
+
+void sumArray(double *data){
+  for(int i=0; i<=5 ; i++){
+    double sum += *(data+i);
+  }
+  return sum;
+}
+
+int main(){
+  double *array = new double[5];
+  enterArrayData(array);
+  outputArrayData(array);
+
+  cout << "Sum of values: " << sumArray(array) << endl;
+  delete[] array;
+return 0;
 }
