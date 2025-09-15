@@ -2,7 +2,6 @@
 // IDE used: Visual Studio Code
 
 #include <iostream>
-#include <ctime>
 using namespace std;
 
 //function for data entry
